@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: Reaction404Front
+    runtime: vue
+    region: frankfurt # or another region
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+    buildCommand: npm install
+    startCommand: npm run serve  # Change if your entry file is different
