@@ -1,7 +1,7 @@
 services:
   - type: web
     name: Reaction404Front
-    runtime: vue
+    runtime: node
     region: frankfurt # or another region
     plan: free
     envVars:
