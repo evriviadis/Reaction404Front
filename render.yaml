@@ -1,11 +1,8 @@
 services:
-  - type: web
+  - type: static
     name: Reaction404Front
-    runtime: node
-    region: frankfurt # or another region
-    plan: free
     envVars:
-      - key: DATABASE_URL
+      - key: VITE_API_URL
         sync: false
-    buildCommand: npm install
-    startCommand: npm run serve  # Change if your entry file is different
+    buildCommand: npm install && npm run serve
+    staticPublishPath: dist
